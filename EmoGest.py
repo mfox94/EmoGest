@@ -2,7 +2,7 @@ import numpy as np
 # import keras
 import cv2
 
-hand_cascade = cv2.CascadeClassifier('haarcascade/aGest.xml')
+hand_cascade = cv2.CascadeClassifier('haarcascade/cascade.xml')
 
 
 # model = keras.models.load_model("gesture_recog.h5")
