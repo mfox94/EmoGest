@@ -2,7 +2,7 @@ import numpy as np
 # import keras
 import cv2
 
-hand_cascade = cv2.CascadeClassifier('haarcascade/Hand_haar_cascade.xml')
+hand_cascade = cv2.CascadeClassifier('haarcascade/aGest.xml')
 
 
 # model = keras.models.load_model("gesture_recog.h5")
@@ -25,7 +25,7 @@ while (cap.isOpened()):
     # Capture frame-by-frame
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    hand = hand_cascade.detectMultiScale(gray, 9, 5)  # DETECTING HAND IN THE THRESHOLDE IMAGE)
+    hand = hand_cascade.detectMultiScale(gray, 1.3, 5)  # DETECTING HAND IN THE THRESHOLDE IMAGE)
     for (x, y, w, h) in hand:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
     # new_img = img_to_mnist(frame)
