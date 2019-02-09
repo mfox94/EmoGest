@@ -16,7 +16,7 @@ test.drop('label', axis = 1, inplace = True)
 x_train = train.values
 x_test = test.values
 x_train = x_train.reshape(x_train.shape[0], 28, 28)
-x_train = x_test.reshape(x_test.shape[0], 28, 28)
+x_test = x_test.reshape(x_test.shape[0], 28, 28)
 
 if not os.path.exists(output_dir):
   os.makedirs(output_dir)
