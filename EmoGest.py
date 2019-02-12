@@ -5,7 +5,7 @@ import scipy.misc
 import pandas as pd
 
 #hand_cascade = cv2.CascadeClassifier('haarcascade/cascade4.xml')
-model = keras.models.load_model("gesture_recog_ONE-HOT.h5")
+model = keras.models.load_model("gesture_recog_NL.h5")
 
 def img_to_mnist(img, i):
     new_img = cv2.resize(img,(28,28))
@@ -15,7 +15,7 @@ def img_to_mnist(img, i):
     return new_img
 	
 def index_to_label(index):
-    labels = ['fist', 'stop', 'question', 'ok', 'loser']
+    labels = ['fist', 'stop', 'question', 'ok']
     return labels[index]
 
 cap = cv2.VideoCapture(0)
